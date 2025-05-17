@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Juan Bárbaro Fuentes Santana</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+            margin-bottom: 20px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: var(--primary-color);
+            margin: 0 auto 20px;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .contact-item i {
+            color: var(--secondary-color);
+        }
+        
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .job {
+            margin-bottom: 30px;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .company {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .period {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .job-description {
+            margin-top: 10px;
+        }
+        
+        .job-description ul {
+            padding-left: 20px;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-item {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .project {
+            margin-bottom: 30px;
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .job-title, .company {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .period {
+                margin-top: 5px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-img">JF</div>
+            <h1 class="name">Juan Bárbaro Fuentes Santana</h1>
+            <h2 class="title">Ingeniero en Ciencias Informáticas</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:barbaro.fuentessantana@gmail.com" style="color: white; text-decoration: none;">barbaro.fuentessantana@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+53 58681708</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>La Habana, Cuba</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/jbarbarofuentes" style="color: white; text-decoration: none;">linkedin.com/in/jbarbarofuentes</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    
+                     <a href="https://github.com/ZaneFuentes" style="color: white; text-decoration: none;">https://github.com/ZaneFuentes</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section" id="profile">
+            <h3 class="section-title">Perfil Profesional</h3>
+            <p>
+                <strong>Ingeniero en Ciencias Informáticas</strong> con experiencia en <strong>desarrollo de software móvil</strong> utilizando <strong>C++</strong> y <strong>QML</strong>. Capacidad para trabajar en equipos ágiles, resolver problemas complejos y aprender nuevas tecnologías rápidamente. Enfoque en aplicaciones de videovigilancia y sistemas embebidos.
+            </p>
+        </section>
+
+        <section class="section" id="experience">
+            <h3 class="section-title">Experiencia Laboral</h3>
+            
+            <div class="job">
+                <div class="job-title">
+                    <span>Desarrollador Junior</span>
+                    <span class="period">2025 - Actualidad</span>
+                </div>
+                <div class="company">
+                    <span>Xetid</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li><strong>Desarrollo de aplicaciones móviles</strong> para videovigilancia con <strong>QML (nivel intermedio)</strong> y <strong>C++</strong>, mejorando la portabilidad de un sistema comercializado el cual carecía de un APK.</li>
+                        <li>Colaboración en el ciclo de vida del software: <strong>diseño, codificación, pruebas y depuración</strong>.</li>
+                        <li>Integración de APIs y optimización de interfaces de usuario.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-title">
+                    <span>Trabajador Social</span>
+                    <span class="period">2018 - 2019</span>
+                </div>
+                <div class="company">
+                    <span>Ministerio del Trabajo</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li><strong>Gestión de bases de datos</strong> y expedientes digitales, automatizando procesos clave.</li>
+                        <li>Investigación y análisis de datos para informes institucionales.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <h3 class="section-title">Formación Académica</h3>
+            
+            <div class="job">
+                <div class="job-title">
+                    <span>Ingeniería en Ciencias Informáticas</span>
+                    <span class="period">2019 - 2024</span>
+                </div>
+                <div class="company">
+                    <span>Universidad de Ciencias Informáticas (UCI)</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Proyecto de grado: <strong>Desarrollo de una aplicación móvil para Sistema de Videovigilancia</strong>.</li>
+                        <li>Cursos destacados: Programación Avanzada, Algoritmos, Bases de Datos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <h3 class="section-title">Habilidades Técnicas</h3>
+            
+            <div class="skill-category">
+                <h4>Lenguajes</h4>
+                <div class="skill-items">
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">QML</div>
+                    <div class="skill-item">Java</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">HTML/CSS/JavaScript</div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Frameworks/Tools</h4>
+                <div class="skill-items">
+                    <div class="skill-item">Qt Framework</div>
+                    <div class="skill-item">Git</div>
+                    <div class="skill-item">Visual Studio Code</div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Metodologías</h4>
+                <div class="skill-items">
+                    <div class="skill-item">Desarrollo Ágil</div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Idiomas</h4>
+                <div class="skill-items">
+                    <div class="skill-item">Español (nativo)</div>
+                    <div class="skill-item">Inglés (A2)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h3 class="section-title">Proyectos Destacados</h3>
+            
+            <div class="project">
+                <h4 class="project-title">Aplicación de Videovigilancia</h4>
+                <ul>
+                    <li>Desarrollada en <strong>QML/C++</strong> para sistema de videovigilancia ante la necesidad de una aplicación móvil para el mismo.</li>
+                    <li>Funcionalidades clave: Streaming en tiempo real, detección de movimiento, reconocimiento facial.</li>
+                </ul>
+            </div>
+            
+            <div class="project">
+                <h4 class="project-title">Proyecto Universitario</h4>
+                <ul>
+                    <li>Desarrollo de aplicación móvil para Sistema de Videovigilancia.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Juan Bárbaro Fuentes Santana - Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/jbarbarofuentes" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para hacer que la navegación sea suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
